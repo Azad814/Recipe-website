@@ -11,7 +11,9 @@
     <header>
         <div class="container">
             <h1 class="logo">Delicious Recipes</h1>
-            <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -26,5 +28,10 @@
         <h1>Contact Us</h1>
         <p>Have questions? Reach out to us!</p>
     </section>
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-list").classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
