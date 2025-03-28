@@ -170,23 +170,6 @@ footer{
     display: block;
 
 }
-@media only screen and (min-width: 768px){
-    .menu-icon{
-        display: none;}
-    .nav-list{
-        display: block;
-
-    }
-}
-
-@media only screen and (max-width: 768px){
-    .menu-icon{
-        display: none;}
-    .nav-list{
-        display: block;
-
-    }
-}
 
 
 
@@ -237,28 +220,28 @@ header {
     cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .nav-list {
         display: none;
         flex-direction: column;
         position: absolute;
         top: 60px;
-        left: 0;
+        right: 0;
         background: #222122;
         width: 100%;
-        padding: 10px 0;
+        text-align: center;
     }
 
     .nav-list.active {
         display: flex;
     }
 
-    .nav-list li {
-        text-align: center;
-        padding: 10px 0;
-    }
-
     .menu-icon {
+        padding:0px;
+        text-align: right;
         display: block;
+        cursor: pointer;
+        display: block;
+        margin-left: 6cm;
     }
 }
