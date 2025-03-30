@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo"><a href="index.html">Delicious Recipes</a></h1>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="recipe.html">Recipes</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="section">
+        <div class="container2">
+            <div class="content-section">
+                <div class="title">
+                    <h1>About Us</h1>
+                </div>
+                <div class="content">
+                    <h3>Welcome to Delicious Recipes!</h3>
+                    <p>We are passionate about sharing amazing recipes with food lovers around the world.</p>
+                    <p id="moreText" style="display: none;">Our mission is to inspire and bring joy through cooking by providing easy-to-follow recipes, kitchen tips, and healthy meal ideas. Join us in our journey to explore the world of flavors!</p>
+                    <div class="button">
+                        <a href="#" id="readMoreBtn" onclick="toggleReadMore()">Read More</a>
+                    </div>
+                </div>
+                <div class="social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="images/images/hero-image.jpg" alt="About Us">
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            document.querySelector(".nav-list").classList.toggle("active");
+        }
+        
+        function toggleReadMore() {
+            var moreText = document.getElementById("moreText");
+            var btnText = document.getElementById("readMoreBtn");
+            
+            if (moreText.style.display === "none") {
+                moreText.style.display = "block";
+                btnText.innerText = "Read Less";
+            } else {
+                moreText.style.display = "none";
+                btnText.innerText = "Read More";
+            }
+        }
+    </script>
+</body>
+</html>
