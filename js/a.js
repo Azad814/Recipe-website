@@ -2,12 +2,16 @@ let recipes = [];
 
 document.addEventListener("DOMContentLoaded", async function () {
     try {
+        //  Fetching the data from the json
         const response = await fetch("recipe.json");
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         data = await response.json();
+        // data is stored in the global array named recipes
         recipes = data.users;
+
+        // Modifying the data in the modal
         const modal = document.getElementById("recipeModal");
         const modalTitle = document.getElementById("modalTitle");
         const modalImage = document.getElementById("modalImage");
@@ -22,6 +26,8 @@ document.addEventListener("DOMContentLoaded", async function () {
                 // Get recipe details from button attributes
                 const recipeId = this.getAttribute("data-id");
                 const recipe = recipes.find(r=>r.id===recipeId);
+
+                // Setting the data in the modal according to the json attributes
                 if(recipe){
                     // modalTitle.textContent = this.getAttribute("data-title");
                     modalTitle.textContent = recipe.name;
