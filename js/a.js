@@ -3,7 +3,7 @@ let recipes = [];
 document.addEventListener("DOMContentLoaded", async function () {
     try {
         //  Fetching the data from the json
-        const response = await fetch("recipe.json");
+        const response = await fetch("../recipe.json");
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }

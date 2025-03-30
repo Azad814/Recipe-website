@@ -2,64 +2,116 @@
     "users": [
         {
             "name": "Maggi",
-            "ingredient": ["1. Water", "2. Maggi"],
-            "process": ["1. Add water", "2. Turn on the stove"],
-            "id": "1"
-        },
-        {
-            "name": "name 2",
-            "ingredient": [],
-            "process": [],
-            "id": "2"
-        },
-        {
-            "name": "name 3",
-            "ingredient": [],
-            "process": [],
-            "id": "3"
-        },
-        {
-            "name": "name 4",
-            "ingredient": [],
-            "process": [],
-            "id": "4"
-        },
-        {
-            "name": "name 5",
-            "ingredient": [],
-            "process": [],
-            "id": "5"
-        },
-        {
-            "name": "name 6",
-            "ingredient": [],
-            "process": [],
-            "id": "6"
-        },
-        {
-            "name": "name 7",
-            "ingredient": [],
-            "process": [],
-            "id": "7"
-        },
-        {
-            "name": "name 8",
-            "ingredient": [],
-            "process": [],
-            "id": "8"
-        },
-        {
-            "name": "name 9",
-            "ingredient": [],
-            "process": [],
-            "id": "9"
-        },
-        {
-            "name": "name 10",
-            "ingredient": [],
-            "process": [],
-            "id": "10"
-        },
+            "image_url": "./images/recipe/1.jpg",
+            "ingredient": ["1. Maggi", "2. Water"],
+            "process": [
+              "1. Add water",
+              "2. Boil the water",
+              "3. Add maggi masala",
+              "4. Add Maggi"
+            ],
+            "id": 1
+          },
+          {
+            "name": "Pasta",
+            "image_url": "./images/recipe/2.jpg",
+            "ingredient": ["1. Pasta", "2. Water", "3. Salt", "4. Tomato Sauce"],
+            "process": [
+              "1. Boil water",
+              "2. Add pasta and salt",
+              "3. Cook for 10 minutes",
+              "4. Drain and mix with sauce"
+            ],
+            "id": 2
+          },
+          {
+            "name": "Omelette",
+            "image_url": "./images/recipe/3.jpg",
+            "ingredient": ["1. Eggs", "2. Salt", "3. Pepper", "4. Butter"],
+            "process": [
+              "1. Beat eggs with salt and pepper",
+              "2. Heat butter in pan",
+              "3. Pour eggs and cook until done"
+            ],
+            "id": 3
+          },
+          {
+            "name": "Sandwich",
+            "image_url": "./images/recipe/4.jpg",
+            "ingredient": ["1. Bread", "2. Butter", "3. Cheese", "4. Tomato"],
+            "process": [
+              "1. Spread butter on bread",
+              "2. Add cheese and tomato",
+              "3. Toast for 5 minutes"
+            ],
+            "id": 4
+          },
+          {
+            "name": "Fried Rice",
+            "image_url": "./images/recipe/5.jpg",
+            "ingredient": ["1. Rice", "2. Vegetables", "3. Soy Sauce"],
+            "process": [
+              "1. Cook rice",
+              "2. Stir-fry vegetables",
+              "3. Add rice and soy sauce",
+              "4. Mix well"
+            ],
+            "id": 5
+          },
+          {
+            "name": "Pancakes",
+            "image_url": "./images/recipe/6.jpg",
+            "ingredient": ["1. Flour", "2. Milk", "3. Eggs", "4. Sugar"],
+            "process": [
+              "1. Mix ingredients into batter",
+              "2. Heat pan and pour batter",
+              "3. Cook on both sides until golden"
+            ],
+            "id": 6
+          },
+          {
+            "name": "Dal Tadka",
+            "image_url": "./images/recipe/7.jpg",
+            "ingredient": ["1. Lentils", "2. Onion", "3. Tomato", "4. Spices"],
+            "process": [
+              "1. Boil lentils",
+              "2. Prepare tadka with onions and spices",
+              "3. Mix with lentils and cook"
+            ],
+            "id": 7
+          },
+          {
+            "name": "Chow Mein",
+            "image_url": "./images/recipe/8.jpg",
+            "ingredient": ["1. Noodles", "2. Vegetables", "3. Soy Sauce"],
+            "process": [
+              "1. Boil noodles",
+              "2. Stir-fry vegetables",
+              "3. Add noodles and soy sauce"
+            ],
+            "id": 8
+          },
+          {
+            "name": "Smoothie",
+            "image_url": "./images/recipe/9.jpg",
+            "ingredient": ["1. Banana", "2. Milk", "3. Honey"],
+            "process": [
+              "1. Blend all ingredients until smooth"
+            ],
+            "id": 9
+          },
+          {
+            "name": "Biryani",
+            "image_url": "./images/recipe/10.jpg",
+            "ingredient": ["1. Rice", "2. Chicken", "3. Spices"],
+            "process": [
+              "1. Marinate chicken",
+              "2. Cook rice with spices",
+              "3. Layer chicken and rice",
+              "4. Cook until done"
+            ],
+            "id": 10
+          },
         {
             "name": "name 11",
             "ingredient": [],
