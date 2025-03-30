@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         data = await response.json();
         // data is stored in the global array named recipes
         recipes = data.users;
+        console.log(recipes);
 
         // Modifying the data in the modal
         const modal = document.getElementById("recipeModal");
