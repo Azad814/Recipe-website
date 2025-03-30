@@ -47,7 +47,7 @@ nav ul li{
 .hero{
     width: 100%;
     height: 400px;
-    background: url(images/images/heo-image.jpg);
+    background: url(../images/images/heo-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -480,5 +480,9 @@ header {
     }
 }
 
+.home_logo{
+    text-decoration: none !important;
+    color: white
+}
 
 

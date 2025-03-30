@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Delicious Recipes</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-   
+
 </head>
+
 <body>
     <header>
         <div class="container">
-            <h1 class="logo">Delicious Recipes</h1>
+            <h1 class="logo">
+                <a class="home_logo" href="index.html">
+                    Delicious Recipes
+                </a>
+            </h1>
             <div class="menu-icon" onclick="toggleMenu()">
                 <i class="fas fa-bars"></i>
             </div>
@@ -32,86 +38,93 @@
         }
     </script>
 </body>
+
 </html>
 
-     <section class="hero">
-        <div class="hero-section">
-            <h2>Welcome to our Recipe Collection!</h2>
-            <p>Search mouth watering recipes to satisfy your craving.</p>
+<section class="hero">
+    <div class="hero-section">
+        <h2>Welcome to our Recipe Collection!</h2>
+        <p>Search mouth watering recipes to satisfy your craving.</p>
 
-            <!-- <form action="#" class="search-box">
+        <!-- <form action="#" class="search-box">
                 <input type="text" placeholder="Search Recipe">
                 <button>Search</button> -->
 
-            <!-- </form> -->
-        </div>
-    </section>
+        <!-- </form> -->
+    </div>
+</section>
 
-    <!--recipe section-->
-    <section class="recipes">
-        <h1>Featured Recipes</h1>
-        <div class="recipe-section">
-            <div class="recipe-card">
+<!--recipe section-->
+<section class="recipes">
+    <h1>Featured Recipes</h1>
+    <div class="recipe-section">
+        <div class="recipe-card">
             <img src="images/images/dish-1.jpg" alt="">
             <h2>Strawberry Custard</h2>
             <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
-            <a href="#" class="view-recipe" data-title="Strawberry Custard" 
-   data-image="images/images/dish-1.jpg"
-   data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
+            <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+               data-id="1" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
         </div>
-       
+
         <div class="recipe-card">
             <img src="images/images/dish-2.jpg" alt="">
             <h2>Strawberry Custard</h2>
             <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
-            <a href="#" class="view-recipe" data-title="Strawberry Custard" 
-   data-image="images/images/dish-1.jpg"
-   data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
+            <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                data-id="2" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
         </div>
         <div class="recipe-card">
             <img src="images/images/dish-3.jpg" alt="">
             <h2>Strawberry Custard</h2>
             <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
             <!-- <a href="#">View Recipe</a> -->
-            <a href="#" class="view-recipe" data-title="Strawberry Custard" 
-            data-image="images/images/dish-1.jpg"
-            data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
+            <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+            data-id="3" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
         </div>
         <div class="recipe-card">
             <img src="images/images/dish-4.jpg" alt="">
             <h2>Strawberry Custard</h2>
             <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
             <!-- <a href="#">View Recipe</a> -->
-            <a href="#" class="view-recipe" data-title="Strawberry Custard" 
-            data-image="images/images/dish-1.jpg"
-            data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
+            <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+            data-id="4" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
         </div>
-        </div>
-
-
-        <!-- Modal Structure -->
-<div id="recipeModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modalTitle">Recipe Name</h2>
-        <img id="modalImage" src="" alt="Recipe Image">
-        <p id="modalDescription">Recipe details will appear here...</p>
     </div>
-</div>
 
-
-    </section>
-    
-
-    <footer>
-        <div>
-            <p>&copy; 2025 Delicious recipes</p>
+    <div id="recipeModal" class="modal">
+        <div class="modal-content" id="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Recipe Name</h2>
+            <img id="modalImage" src="" alt="Recipe Image">
+            <p id="recipeIngredients">Ingredients will appear here.....</p><br /><hr /><br />
+            <p id="modalDescription">Recipe details will appear here...</p>
         </div>
+    </div>
+    <!-- Modal Structure -->
+    <!-- <div id="recipeModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle">Recipe Name</h2>
+            <img id="modalImage" src="" alt="Recipe Image">
+            <p id="modalDescription">Recipe details will appear here...</p>
+        </div>
+    </div> -->
 
-    </footer>
-    <script src="a.js"></script>
+
+</section>
+
+
+<footer>
+    <div>
+        <p>&copy; 2025 Delicious recipes</p>
+    </div>
+
+</footer>
+<script src="./js/a.js"></script>
 </body>
+
 </html>
 
 </body>
+
 </html>
