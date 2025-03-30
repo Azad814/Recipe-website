@@ -59,3 +59,34 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Couldn't able to fetch the data:", error);
     }
 });
+
+
+
+
+
+
+
+
+// caraousel
+
+
+    // Initialize Swiper
+    var swiper = new Swiper(".hero-swiper", {
+        loop: true,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+    });

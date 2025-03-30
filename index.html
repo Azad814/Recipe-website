@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,18 +42,122 @@
 
 </html>
 
+
+<!-- Hero Section with Carousel -->
 <section class="hero">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/images/dish-1.jpg" alt="Delicious Dish">
+                <div class="hero-text">
+                    <h2>Welcome to our Recipe Collection!</h2>
+                    <p>Discover mouth-watering recipes to satisfy your cravings.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/images/dish-2.jpg" alt="Tasty Food">
+                <div class="hero-text">
+                    <h2>Cooking Made Easy</h2>
+                    <p>Find step-by-step guides to cook like a pro.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/images/dish-3.jpg" alt="Healthy Meal">
+                <div class="hero-text">
+                    <h2>Healthy & Delicious</h2>
+                    <p>Try nutritious meals that taste amazing.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Swiper navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <!-- Swiper pagination (dots) -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+
+<!-- Add these right before your closing </body> tag -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<!-- <section class="hero">
     <div class="hero-section">
         <h2>Welcome to our Recipe Collection!</h2>
         <p>Search mouth watering recipes to satisfy your craving.</p>
 
-        <!-- <form action="#" class="search-box">
+         <form action="#" class="search-box">
                 <input type="text" placeholder="Search Recipe">
-                <button>Search</button> -->
+                <button>Search</button> 
 
-        <!-- </form> -->
+        </form>  
     </div>
-</section>
+</section> -->
+<!-- Swiper CSS -->
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+<!- Hero Section with Carousel -->
+<!-- <section class="hero">
+    <div class="swiper hero-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/images/dish-1.jpg" alt="Delicious Dish">
+                <div class="hero-text">
+                    <h2>Welcome to our Recipe Collection!</h2>
+                    <p>Discover mouth-watering recipes to satisfy your cravings.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/images/dish-2.jpg" alt="Tasty Food">
+                <div class="hero-text">
+                    <h2>Cooking Made Easy</h2>
+                    <p>Find step-by-step guides to cook like a pro.</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images/images/dish-3.jpg" alt="Healthy Meal">
+                <div class="hero-text">
+                    <h2>Healthy & Delicious</h2>
+                    <p>Try nutritious meals that taste amazing.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!- Swiper navigation buttons
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        
+        <!- Swiper pagination (dots) -->
+ <!--       <div class="swiper-pagination"></div>
+    </div>
+</section> 
+
+<!-Swiper JS -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".hero-swiper", {
+        loop: true,
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script> --> 
+ 
+
+
+
 
 <!--recipe section-->
 <section class="recipes">
@@ -108,7 +213,7 @@
             <img id="modalImage" src="" alt="Recipe Image">
             <p id="modalDescription">Recipe details will appear here...</p>
         </div>
-    </div> -->
+    </div>  -->
 
 
 </section>
