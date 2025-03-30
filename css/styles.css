@@ -247,6 +247,7 @@ header {
         background: #222122;
         width: 100%;
         text-align: center;
+        z-index: 999;
     }
 
     .nav-list.active {
