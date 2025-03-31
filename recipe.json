@@ -116,60 +116,86 @@
         "id": "7"
       },
       {
-        "name": "Chow Mein",
+        "name": "Truffle Mushroom & Burrata Pizza",
         "image_url": "./images/recipe/8.jpg",
-        "ingredient": ["1. Noodles", "2. Vegetables", "3. Soy Sauce"],
+        "ingredient": ["1 ball of pizza dough",
+		"2 tbsp truffle oil",
+		"1 cup mixed mushrooms (shiitake, cremini, oyster – sliced)",
+		"1 tbsp butter",
+		"2 cloves garlic (minced)"],
         "process": [
-          "1. Boil noodles",
-          "2. Stir-fry vegetables",
-          "3. Add noodles and soy sauce"
+          "1. Heat butter in a pan and sauté mushrooms with garlic until golden brown. Season with salt and pepper",
+          "2. Bake for 10-12 minutes or until the crust is golden and crispy.",
+          "3. Drizzle with extra truffle oil before serving."
         ],
         "id": "8"
       },
       {
-        "name": "Smoothie",
+        "name": "Prosciutto, Fig & Gorgonzola Pizza",
         "image_url": "./images/recipe/9.jpg",
-        "ingredient": ["1. Banana", "2. Milk", "3. Honey"],
+        "ingredient": ["1 ball of pizza dough",
+		"½ cup fig jam",
+		"1 cup mozzarella cheese (shredded)",
+		"¼ cup Gorgonzola cheese (crumbled)",
+		"4-5 slices prosciutto"],
         "process": [
-          "1. Blend all ingredients until smooth"
+          "1. Spread a thin layer of fig jam over the dough.",
+          "2. Bake for 10-12 minutes until the cheese is melted and the crust is golden.",
+          "3. Garnish with fresh arugula and finish with a light crack of black pepper before serving."
         ],
         "id": "9"
       },
       {
-        "name": "Biryani",
+        "name": "Wild Mushroom & Goat Cheese Pappardelle",
         "image_url": "./images/recipe/10.jpg",
-        "ingredient": ["1. Rice", "2. Chicken", "3. Spices"],
+        "ingredient": ["8 oz pappardelle pasta",
+		"2 tbsp butter",
+		"1 tbsp olive oil",
+		"1 cup mixed wild mushrooms (shiitake, cremini, oyster)",
+		"2 cloves garlic (minced)"],
         "process": [
-          "1. Marinate chicken",
-          "2. Cook rice with spices",
-          "3. Layer chicken and rice",
-          "4. Cook until done"
+          "1. Cook pasta until al dente. Reserve ½ cup pasta water.",
+          "2. Add garlic, cook for 30 seconds, then deglaze with white wine. Reduce by half.",
+          "3. Toss in pasta, using reserved pasta water to adjust sauce."
         ],
         "id": "10"
       },
         {
-            "name": "Truffle Mushroom & Burrata Pizza",
-            "ingredient": ["1 ball of pizza dough","2 tbsp truffle oil",
-        "1 cup mixed mushrooms (shiitake, cremini, oyster – sliced)","1 tbsp butter","2 cloves garlic (minced)"],
+            "name": "Saffron & Shrimp Linguine",
+            "ingredient": ["8 oz linguine",
+		"12 large shrimp (peeled and deveined)",
+		"2 tbsp olive oil",
+		"2 cloves garlic (minced)",
+		"½ cup dry white wine",
+		"½ cup heavy cream"],
             "process": [
-        "1. Heat butter in a pan and sauté mushrooms with garlic until golden brown. ", "Brush the pizza dough with truffle oil, then sprinkle mozzarella on top.",
-    "2. Spread the sautéed mushrooms evenly over the pizza.",
-"3. Spread the sautéed mushrooms evenly over the pizza" ],
+        "1.Cook linguine until al dente, reserving ½ cup pasta water.",
+    "2. Deglaze the pan with white wine and reduce by half.",
+"3. Finish with lemon zest, salt, and fresh basil." ],
             "id": "11"
         },
         {
-            "name": "Grilled Lemon Herb Salmon with Garlic Butter Asparagus",
-            "ingredient": ["2 salmon fillets",	"1 tbsp olive oil",
-        "1 tsp fresh rosemary (chopped)","1 bunch asparagus (trimmed)" ],
-            "process": ["Prepare the salmon marinade – In a bowl, mix olive oil, melted butter, minced garlic, thyme, rosemary, lemon juice, salt, and pepper.",
-        "Marinate the salmon – Brush the marinade over the salmon fillets and let them sit for 10–15 minutes.",
-    "Grill the salmon – Heat a grill pan or outdoor grill over medium-high heat. Cook the salmon for 4–5 minutes per side, or until it flakes easily with a fork. Place lemon slices on top while cooking for extra flavor"],
+            "name": "Brie & Fig Crostini",
+            "ingredient": ["1 baguette (sliced into thin rounds)",
+		"4 oz Brie cheese (sliced)",
+		"¼ cup fig jam",
+		"¼ cup chopped walnuts",
+		"1 tbsp honey",
+		"Fresh thyme (for garnish)" ],
+            "process": ["1. Arrange baguette slices on a baking sheet and toast for 5 minutes.",
+        " 2. Sprinkle with walnuts, drizzle with honey, and garnish with fresh thyme before serving."],
             "id": "12"
         },
         {
-            "name": "name 13",
-            "ingredient": [],
-            "process": [],
+            "name": "Smoked Salmon & Avocado Bites",
+            "ingredient": ["1 ripe avocado (mashed)",
+		"½ lemon (juiced)",
+		"Salt & black pepper to taste",
+		"6 slices smoked salmon",
+		"6 cucumber slices or small"],
+            "process": ["1. In a bowl, mash the avocado with lemon juice, salt, and pepper.",
+        "2. Spread a little cream cheese (if using) on each cucumber slice or cracker.",
+    "3. Garnish with fresh dill and serve immediately."],
             "id": "13"
         },
         {
