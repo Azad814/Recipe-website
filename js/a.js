@@ -91,3 +91,21 @@ document.addEventListener("DOMContentLoaded", async function () {
             crossFade: true
         },
     });
+
+
+
+    //search button
+
+    function searchRecipes() {
+        let input = document.getElementById('searchInput').value.toLowerCase();
+        let recipes = document.querySelectorAll('.recipe-card');
+    
+        recipes.forEach(recipe => {
+            let title = recipe.querySelector('h2').textContent.toLowerCase();
+            if (title.includes(input)) {
+                recipe.style.display = "block"; // Show if it matches
+            } else {
+                recipe.style.display = "none"; // Hide if it doesn't match
+            }
+        });
+    }
