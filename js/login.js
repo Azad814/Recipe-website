@@ -11,7 +11,7 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         if (response.status = 200) {
             const authToken = await response.json();
             document.cookie = "authToken=" + authToken;
-            window.location.href = "/admin.html";
+            window.location.href = "/admin_dash.html";
         }
         else {
             window.alert("Username or Password is incorrect");
