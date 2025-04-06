@@ -202,7 +202,7 @@ recipeForm.addEventListener('submit', (e) => {
 
     const recipe = {
         name: title,
-        ingredients: ingredients,
+        ingredient: ingredients,
         process: process,
         image: image
     };
