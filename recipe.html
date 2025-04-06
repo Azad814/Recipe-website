@@ -88,7 +88,7 @@
         <div class="container">
             <h1 class="logo">
                 <a class="home_logo" href="index.html">
-                    Delicious Recipes
+                    YumVault
                 </a>
             </h1>
             <nav>
@@ -96,125 +96,131 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="recipe.html">Recipes</a></li>
-                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                    <li><a href="login.html">Login </a></li> 
                 </ul>
             </nav>
         </div>
     </header>
 
     <section class="recipes">
-        <h1>Featured Recipes</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search recipes..." onkeyup="searchRecipes()">
+            <button onclick="searchRecipes()">Search</button>
+        </div>
+        
+        <h1>Our Recipes Collection</h1>
         <div class="recipe-section">
             <div class="recipe-card">
-                <img src="images/images/dish-1.jpg" alt="">
+                <img src="images/images/Strawberry custard.jpg" alt="">
                 <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <p>Creamy, Fruity and Delightful </p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Maggi" 
+                 data-image="images/images/Strawberry custard.jpg" 
                     data-id="1" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
 
             <div class="recipe-card">
-                <img src="images/images/dish-2.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/bananapancakes.jpg" alt="">
+                <h2>Fluffy Banana Pancakes</h2>
+                <p>Light, fluffy, banana perfection</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/bananapancakes.jpg"
                     data-id="2" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-3.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/avocado egg.jpg" alt="">
+                <h2>Avocado Egg Toast</h2>
+                <p>Creamy, Favory and nutritious</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/avocado egg.jpg"
                     data-id="3" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/salmon.jpg" alt="">
+                <h2>Grilled Lemon Herb Salmon</h2>
+                <p>Fresh and Zesty</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/salmon.jpg"
                     data-id="4" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/filet.jpeg" alt="">
+                <h2>Filet Mignon</h2>
+                <p>Tender, juicy flovr and luxurious</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/filet.jpg"
                     data-id="5" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/popcorn.jpeg" alt="">
+                <h2>Truffle Parmesan Popcorn</h2>
+                <p>Savory, aromatic and addictive</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/popcorn.jpg"
                     data-id="6" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/lobster.jpg" alt="">
+                <h2>Lobster Risotto</h2>
+                <p>Creamy texture, decadent and flavorful taste</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/lobster.jpg"
                     data-id="7" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/truffle mushroom.jpg" alt="">
+                <h2>Truffle Mushroom & Burrata Pizza</h2>
+                <p>Earthy, creamy and indulgent</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/truffle mushroom.jpg"
                     data-id="8" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/fig.jpg" alt="">
+                <h2>Prosciutto, Fig & Gorgonzola Pizza</h2>
+                <p>Savory, sweet and tangy.</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/fig.jpg"
                     data-id="9" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/wild mushroom.jpg" alt="">
+                <h2>Wild Mushroom & Goat Cheese Pappardelle</h2>
+                <p>Earthy, creamy and rich</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/wild mushroom.jpg"
                     data-id="10" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/prawn.jpg" alt="">
+                <h2>Saffron & Shrimp Linguine</h2>
+                <p>Fragrant, succulent and elegant.</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/prawn.jpg"
                     data-id="11" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/brie.jpg" alt="">
+                <h2>Brie & Fig Crostini</h2>
+                <p>Creamy, sweet and crisp</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/brie.jpg"
                     data-id="12" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
             <div class="recipe-card">
-                <img src="images/images/dish-4.jpg" alt="">
-                <h2>Strawberry Custard</h2>
-                <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
+                <img src="images/images/smoked.jpg" alt="">
+                <h2>Smoked Salmon & Avocado Bites</h2>
+                <p>Silky, creamy and refreshing.</p>
                 <!-- <a href="#">View Recipe</a> -->
-                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
+                <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/smoked.jpg"
                     data-id="13" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
-            <div class="recipe-card">
+            <!-- <div class="recipe-card">
                 <img src="images/images/dish-4.jpg" alt="">
                 <h2>Strawberry Custard</h2>
                 <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
-                <!-- <a href="#">View Recipe</a> -->
+                 <a href="#">View Recipe</a> 
                 <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
                     data-id="14" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
@@ -222,7 +228,7 @@
                 <img src="images/images/dish-4.jpg" alt="">
                 <h2>Strawberry Custard</h2>
                 <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
-                <!-- <a href="#">View Recipe</a> -->
+              
                 <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
                     data-id="15" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
             </div>
@@ -230,10 +236,10 @@
                 <img src="images/images/dish-4.jpg" alt="">
                 <h2>Strawberry Custard</h2>
                 <p>sdjnsdkjfnsfklfvdf dvfvofvnmfv00</p>
-                <!-- <a href="#">View Recipe</a> -->
+               
                 <a href="#" class="view-recipe" data-title="Strawberry Custard" data-image="images/images/dish-1.jpg"
                     data-id="16" data-description="Delicious strawberry custard with a creamy texture.">View Recipe</a>
-            </div>
+            </div> -->
         </div>
         <div id="recipeModal" class="modal">
             <div class="modal-content" id="modal-content">
@@ -268,10 +274,10 @@
                                     Call +91 1234567890
                                 </span>
                             </a>
-                            <a href="">
+                            <a href="mailto:samriddhikapoor00@gmail.com">
                                 <i class="fa fa-envelope" aria-hidden="true"></i>
                                 <span>
-                                    abc@gmail.com
+                                    samriddhikapoor00@gmail.com
                                 </span>
                             </a>
                         </div>
@@ -280,10 +286,10 @@
                 <div class="col-md-4 footer-col">
                     <div class="footer_detail">
                         <a href="" class="footer-logo">
-                            Delicious Recipies
+                            YumVault
                         </a>
                         <p>
-                            We post Delicious Recipies on this website join us today.
+                            We post Delicious Recipes on this website join us today.
                         </p>
                         <div class="footer_social">
                             <a href="https://facebook.com" target="_blank">
@@ -309,7 +315,7 @@
                         About Developer
                     </h4>
                     <p>
-                        Azad
+                        Samriddhi and Ravneet
                     </p>
                     <p>
                         Recipe Website Project

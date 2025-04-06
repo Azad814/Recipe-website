@@ -1,55 +1,81 @@
 {
     "users": [
         {
-        "name": "Maggi",
+        "name": "Strawberry",
         "image_url": "./images/recipe/1.jpg",
-        "ingredient": ["1. Maggi", "2. Water"],
+        "ingredient": ["2 cups fresh strawberries (hulled and chopped)",
+        "2 cups milk",
+	    "½ cup sugar",
+		"2 egg yolks",
+		"2 tbsp cornstarch",
+		"1 tsp vanilla extract",
+		"¼ cup heavy cream (optional for extra richness)",
+		"A pinch of salt"],
         "process": [
-          "1. Add water",
-          "2. Boil the water",
-          "3. Add maggi masala",
-          "4. Add Maggi"
+          "1. Blend the strawberries – Puree the strawberries in a blender until smooth. \n If you prefer a smoother custard, strain the puree to remove seeds.\n",
+          "2. Temper the eggs – Gradually pour some of the warm milk into the egg mixture, whisking continuously to prevent curdling.\n",
+          "3. Finish and chill – Remove from heat, stir in vanilla extract and heavy cream (if using). Transfer to serving bowls and refrigerate for at least 2 hours\n"
         ],
         "id": "1"
       },
       {
-        "name": "Pasta",
+        "name": "Fluffy Banana Pancakes",
         "image_url": "./images/recipe/2.jpg",
-        "ingredient": ["1. Pasta", "2. Water", "3. Salt", "4. Tomato Sauce"],
+        "ingredient": ["1 ripe banana (mashed)",
+		"1 cup all-purpose flour",
+		"1 tbsp sugar",
+		"1 tsp baking powder",
+		"½ tsp cinnamon",
+		"¾ cup milk",
+		"1 egg white",
+		"1 tsp vanilla extract",	
+        "1 tbsp melted butter or oil","Pinch of salt"],
         "process": [
-          "1. Boil water",
-          "2. Add pasta and salt",
-          "3. Cook for 10 minutes",
-          "4. Drain and mix with sauce"
+          "1. In a bowl, mix flour, sugar, baking powder, cinnamon, and salt.",
+          "2. Heat a pan over medium heat, grease lightly, and pour small amounts of batter.",
+          "3. Serve with honey, maple syrup, or fresh fruit."
         ],
         "id": "2"
       },
       {
-        "name": "Omelette",
+        "name": "Avocado & Egg Toast",
         "image_url": "./images/recipe/3.jpg",
-        "ingredient": ["1. Eggs", "2. Salt", "3. Pepper", "4. Butter"],
+        "ingredient": ["1 ripe avocado",
+		"2 slices of whole-grain bread",
+		"2 eggs",
+		"½ tsp lemon juice",
+		"Salt & pepper to taste",	"Chili flakes or everything bagel"],
         "process": [
-          "1. Beat eggs with salt and pepper",
-          "2. Heat butter in pan",
-          "3. Pour eggs and cook until done"
+          "1. Toast the bread until golden and crispy.",
+          "2.Cook eggs to your preference (fried, poached, or scrambled).",
+          "3. Sprinkle with chili flakes or seasoning for extra flavor."
         ],
         "id": "3"
       },
       {
-        "name": "Sandwich",
+        "name": "Grilled Lemon Herb Salmon with Garlic Butter Asparagus",
         "image_url": "./images/recipe/4.jpg",
-        "ingredient": ["1. Bread", "2. Butter", "3. Cheese", "4. Tomato"],
+        "ingredient": ["2 salmon fillets",
+		"1 tbsp olive oil",
+		"1 tbsp butter (melted)",
+	"2 cloves garlic (minced)",
+		"1 tsp fresh thyme (or ½ tsp)"],
         "process": [
-          "1. Spread butter on bread",
-          "2. Add cheese and tomato",
-          "3. Toast for 5 minutes"
+          "1. Prepare the salmon marinade – In a bowl, mix olive oil, melted butter, minced garlic, thyme, rosemary, lemon juice, salt, and pepper.",
+          "2. Marinate the salmon – Brush the marinade over the salmon fillets and let them sit for 10–15 minutes.",
+          "3. Serve – Plate the grilled salmon alongside the garlic butter asparagus. Garnish with extra lemon slices and fresh herbs."
         ],
         "id": "4"
       },
       {
-        "name": "Fried Rice",
+        "name": "Filet Mignon with Red Wine Reduction",
         "image_url": "./images/recipe/5.jpg",
-        "ingredient": ["1. Rice", "2. Vegetables", "3. Soy Sauce"],
+        "ingredient": ["2 filet mignon steaks",
+		"Salt & black pepper to taste",
+		"2 tbsp butter",
+		"2 cloves garlic (smashed)",
+		"1 sprig rosemary",
+		"½ cup red wine",	"½ cup beef broth"],
         "process": [
           "1. Cook rice",
           "2. Stir-fry vegetables",
@@ -59,298 +85,119 @@
         "id": "5"
       },
       {
-        "name": "Pancakes",
+        "name": "Truffle Parmesan Popcorn",
         "image_url": "./images/recipe/6.jpg",
-        "ingredient": ["1. Flour", "2. Milk", "3. Eggs", "4. Sugar"],
+        "ingredient": ["½ cup popcorn kernels",
+		"2 tbsp truffle oil",
+		"¼ cup grated Parmesan cheese",
+		"1 tsp sea salt",
+		"½ tsp black pepper",
+		"½ tsp garlic powder (optional)",	"Fresh parsley (chopped, for garnish)"],
         "process": [
-          "1. Mix ingredients into batter",
-          "2. Heat pan and pour batter",
-          "3. Cook on both sides until golden"
+          "1. Pop the popcorn using an air popper or stovetop method.",
+          "2. Sprinkle with Parmesan, salt, pepper, and garlic powder. Toss again to coat evenly.",
+          "3. Garnish with fresh parsley and serve warm"
         ],
         "id": "6"
       },
       {
-        "name": "Dal Tadka",
+        "name": "Lobster Risotto",
         "image_url": "./images/recipe/7.jpg",
-        "ingredient": ["1. Lentils", "2. Onion", "3. Tomato", "4. Spices"],
+        "ingredient": ["1 lobster tail (cooked and chopped)",
+		"1 cup Arborio rice",
+		"3 cups seafood or chicken broth (warmed)",
+		"½ cup dry white wine",
+		"2 tbsp butter"],
         "process": [
-          "1. Boil lentils",
-          "2. Prepare tadka with onions and spices",
-          "3. Mix with lentils and cook"
+          "1. Sauté onion and garlic in butter until soft.",
+          "2. Add broth gradually, stirring continuously until rice is creamy and tende",
+          "3. Garnish with parsley and serve warm."
         ],
         "id": "7"
       },
       {
-        "name": "Chow Mein",
+        "name": "Truffle Mushroom & Burrata Pizza",
         "image_url": "./images/recipe/8.jpg",
-        "ingredient": ["1. Noodles", "2. Vegetables", "3. Soy Sauce"],
+        "ingredient": ["1 ball of pizza dough",
+		"2 tbsp truffle oil",
+		"1 cup mixed mushrooms (shiitake, cremini, oyster – sliced)",
+		"1 tbsp butter",
+		"2 cloves garlic (minced)"],
         "process": [
-          "1. Boil noodles",
-          "2. Stir-fry vegetables",
-          "3. Add noodles and soy sauce"
+          "1. Heat butter in a pan and sauté mushrooms with garlic until golden brown. Season with salt and pepper",
+          "2. Bake for 10-12 minutes or until the crust is golden and crispy.",
+          "3. Drizzle with extra truffle oil before serving."
         ],
         "id": "8"
       },
       {
-        "name": "Smoothie",
+        "name": "Prosciutto, Fig & Gorgonzola Pizza",
         "image_url": "./images/recipe/9.jpg",
-        "ingredient": ["1. Banana", "2. Milk", "3. Honey"],
+        "ingredient": ["1 ball of pizza dough",
+		"½ cup fig jam",
+		"1 cup mozzarella cheese (shredded)",
+		"¼ cup Gorgonzola cheese (crumbled)",
+		"4-5 slices prosciutto"],
         "process": [
-          "1. Blend all ingredients until smooth"
+          "1. Spread a thin layer of fig jam over the dough.",
+          "2. Bake for 10-12 minutes until the cheese is melted and the crust is golden.",
+          "3. Garnish with fresh arugula and finish with a light crack of black pepper before serving."
         ],
         "id": "9"
       },
       {
-        "name": "Biryani",
+        "name": "Wild Mushroom & Goat Cheese Pappardelle",
         "image_url": "./images/recipe/10.jpg",
-        "ingredient": ["1. Rice", "2. Chicken", "3. Spices"],
+        "ingredient": ["8 oz pappardelle pasta",
+		"2 tbsp butter",
+		"1 tbsp olive oil",
+		"1 cup mixed wild mushrooms (shiitake, cremini, oyster)",
+		"2 cloves garlic (minced)"],
         "process": [
-          "1. Marinate chicken",
-          "2. Cook rice with spices",
-          "3. Layer chicken and rice",
-          "4. Cook until done"
+          "1. Cook pasta until al dente. Reserve ½ cup pasta water.",
+          "2. Add garlic, cook for 30 seconds, then deglaze with white wine. Reduce by half.",
+          "3. Toss in pasta, using reserved pasta water to adjust sauce."
         ],
         "id": "10"
       },
         {
-            "name": "name 11",
-            "ingredient": [],
-            "process": [],
+            "name": "Saffron & Shrimp Linguine",
+            "ingredient": ["8 oz linguine",
+		"12 large shrimp (peeled and deveined)",
+		"2 tbsp olive oil",
+		"2 cloves garlic (minced)",
+		"½ cup dry white wine",
+		"½ cup heavy cream"],
+            "process": [
+        "1.Cook linguine until al dente, reserving ½ cup pasta water.",
+    "2. Deglaze the pan with white wine and reduce by half.",
+"3. Finish with lemon zest, salt, and fresh basil." ],
             "id": "11"
         },
         {
-            "name": "name 12",
-            "ingredient": [],
-            "process": [],
+            "name": "Brie & Fig Crostini",
+            "ingredient": ["1 baguette (sliced into thin rounds)",
+		"4 oz Brie cheese (sliced)",
+		"¼ cup fig jam",
+		"¼ cup chopped walnuts",
+		"1 tbsp honey",
+		"Fresh thyme (for garnish)" ],
+            "process": ["1. Arrange baguette slices on a baking sheet and toast for 5 minutes.",
+        " 2. Sprinkle with walnuts, drizzle with honey, and garnish with fresh thyme before serving."],
             "id": "12"
         },
         {
-            "name": "name 13",
-            "ingredient": [],
-            "process": [],
+            "name": "Smoked Salmon & Avocado Bites",
+            "ingredient": ["1 ripe avocado (mashed)",
+		"½ lemon (juiced)",
+		"Salt & black pepper to taste",
+		"6 slices smoked salmon",
+		"6 cucumber slices or small"],
+            "process": ["1. In a bowl, mash the avocado with lemon juice, salt, and pepper.",
+        "2. Spread a little cream cheese (if using) on each cucumber slice or cracker.",
+    "3. Garnish with fresh dill and serve immediately."],
             "id": "13"
-        },
-        {
-            "name": "name 14",
-            "ingredient": [],
-            "process": [],
-            "id": "14"
-        },
-        {
-            "name": "name 15",
-            "ingredient": [],
-            "process": [],
-            "id": "15"
-        },
-        {
-            "name": "name 16",
-            "ingredient": [],
-            "process": [],
-            "id": "16"
-        },
-        {
-            "name": "name 17",
-            "ingredient": [],
-            "process": [],
-            "id": "17"
-        },
-        {
-            "name": "name 18",
-            "ingredient": [],
-            "process": [],
-            "id": "18"
-        },
-        {
-            "name": "name 19",
-            "ingredient": [],
-            "process": [],
-            "id": "19"
-        },
-        {
-            "name": "name 20",
-            "ingredient": [],
-            "process": [],
-            "id": "20"
-        },
-        {
-            "name": "name 21",
-            "ingredient": [],
-            "process": [],
-            "id": "21"
-        },
-        {
-            "name": "name 22",
-            "ingredient": [],
-            "process": [],
-            "id": "22"
-        },
-        {
-            "name": "name 23",
-            "ingredient": [],
-            "process": [],
-            "id": "23"
-        },
-        {
-            "name": "name 24",
-            "ingredient": [],
-            "process": [],
-            "id": "24"
-        },
-        {
-            "name": "name 25",
-            "ingredient": [],
-            "process": [],
-            "id": "25"
-        },
-        {
-            "name": "name 26",
-            "ingredient": [],
-            "process": [],
-            "id": "26"
-        },
-        {
-            "name": "name 27",
-            "ingredient": [],
-            "process": [],
-            "id": "27"
-        },
-        {
-            "name": "name 28",
-            "ingredient": [],
-            "process": [],
-            "id": "28"
-        },
-        {
-            "name": "name 29",
-            "ingredient": [],
-            "process": [],
-            "id": "29"
-        },
-        {
-            "name": "name 30",
-            "ingredient": [],
-            "process": [],
-            "id": "30"
-        },
-        {
-            "name": "name 31",
-            "ingredient": [],
-            "process": [],
-            "id": "31"
-        },
-        {
-            "name": "name 32",
-            "ingredient": [],
-            "process": [],
-            "id": "32"
-        },
-        {
-            "name": "name 33",
-            "ingredient": [],
-            "process": [],
-            "id": "33"
-        },
-        {
-            "name": "name 34",
-            "ingredient": [],
-            "process": [],
-            "id": "34"
-        },
-        {
-            "name": "name 35",
-            "ingredient": [],
-            "process": [],
-            "id": "35"
-        },
-        {
-            "name": "name 36",
-            "ingredient": [],
-            "process": [],
-            "id": "36"
-        },
-        {
-            "name": "name 37",
-            "ingredient": [],
-            "process": [],
-            "id": "37"
-        },
-        {
-            "name": "name 38",
-            "ingredient": [],
-            "process": [],
-            "id": "38"
-        },
-        {
-            "name": "name 39",
-            "ingredient": [],
-            "process": [],
-            "id": "39"
-        },
-        {
-            "name": "name 40",
-            "ingredient": [],
-            "process": [],
-            "id": "40"
-        },
-        {
-            "name": "name 41",
-            "ingredient": [],
-            "process": [],
-            "id": "41"
-        },
-        {
-            "name": "name 42",
-            "ingredient": [],
-            "process": [],
-            "id": "42"
-        },
-        {
-            "name": "name 43",
-            "ingredient": [],
-            "process": [],
-            "id": "43"
-        },
-        {
-            "name": "name 44",
-            "ingredient": [],
-            "process": [],
-            "id": "44"
-        },
-        {
-            "name": "name 45",
-            "ingredient": [],
-            "process": [],
-            "id": "45"
-        },
-        {
-            "name": "name 46",
-            "ingredient": [],
-            "process": [],
-            "id": "46"
-        },
-        {
-            "name": "name 47",
-            "ingredient": [],
-            "process": [],
-            "id": "47"
-        },
-        {
-            "name": "name 48",
-            "ingredient": [],
-            "process": [],
-            "id": "48"
-        },
-        {
-            "name": "name 49",
-            "ingredient": [],
-            "process": [],
-            "id": "49"
-        },
-        {
-            "name": "name 50",
-            "ingredient": [],
-            "process": [],
-            "id": "50"
         }
+       
     ]
 }
