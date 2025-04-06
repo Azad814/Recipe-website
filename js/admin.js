@@ -140,7 +140,7 @@ recipeForm.addEventListener('submit', async (e) => {
     const process = recipeDescInput.value;
     const image = recipeImageInput.value;
 
-    const recipe = { name, ingredients, process, image };
+    const recipe = { name, ingredient, process, image };
     const token = getCookieValue("authToken");
 
     if (id) {
