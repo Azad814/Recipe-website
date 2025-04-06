@@ -11,7 +11,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
         if (response.status = 200) {
             const authToken = await response.json();
             document.cookie = "authToken=" + authToken;
-            window.location.href = "/admin.html";
+            window.location.href = "/admin_dash.html";
         }
         else if (response.status == 403) {
             window.alert("Admin User Already Exists! Please Login.");
@@ -21,7 +21,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
         }
     }
     else {
-        if (response.status == 200) {
+        if (response.status == 201) {
             const authToken = await response.json();
             console.log(authToken);
             document.cookie = "authToken=" + authToken;
@@ -31,6 +31,7 @@ document.getElementById("signupForm").addEventListener("submit", async (e) => {
             window.alert("User Already Exists! Please Login.");
         }
         else {
+            console.log(response.status);
             window.alert("Please Enter a valid Username or Password");
         }
     }
