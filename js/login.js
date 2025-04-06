@@ -8,6 +8,8 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
         body: JSON.stringify({ username, password }),
     });
     // alert(await response.text());
+    if(response.status(200))
     const authToken = await response.text();
     document.cookie = "authToken=" + authToken;
+    window.location.href = "/index.html";
 });
