@@ -1,39 +1,57 @@
-  // Check if admin is logged in
-  if (!localStorage.getItem('adminLoggedIn')) {
-    window.location.href = 'login.html';
+// Check if admin is logged in
+function getCookieValue(name) {
+    const cookies = document.cookie.split("; ");
+    for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+    }
+    return null;
+}
+function decodeJWT(token) {
+    const payloadBase64 = token.split('.')[1]; // Get payload
+    const payload = atob(payloadBase64.replace(/-/g, '+').replace(/_/g, '/')); // Base64 decode
+    return JSON.parse(payload); // Convert to object
 }
 
-// Sample recipe data (in a real app, this would come from a backend API)
-let recipes = [
-    {
-        id: 1,
-        title: "Strawberry Custard",
-        description: "Creamy, Fruity and Delightful",
-        ingredients: "2 cups fresh strawberries, 2 cups milk, 3 eggs, 1/2 cup sugar, 1 tsp vanilla extract",
-        image: "images/images/Strawberry custard.jpg"
-    },
-    {
-        id: 2,
-        title: "Fluffy Banana Pancakes",
-        description: "Light, fluffy, banana perfection",
-        ingredients: "2 ripe bananas, 1 cup flour, 1 egg, 1/2 cup milk, 1 tbsp sugar, 1 tsp baking powder",
-        image: "images/images/bananapancakes.jpg"
-    },
-    {
-        id: 3,
-        title: "Avocado Egg Toast",
-        description: "Creamy, Savory and nutritious",
-        ingredients: "2 slices whole grain bread, 1 ripe avocado, 2 eggs, salt, pepper, red pepper flakes",
-        image: "images/images/avocado egg.jpg"
-    },
-    {
-        id: 4,
-        title: "Grilled Lemon Herb Salmon",
-        description: "Fresh and Zesty",
-        ingredients: "2 salmon fillets, 1 lemon, 2 tbsp olive oil, 1 tsp dried dill, salt and pepper to taste",
-        image: "images/images/salmon.jpg"
+const token = getCookieValue("authToken");
+
+if (!token) {
+    window.location.href = "./login.html";
+}
+else {
+    const decoded = decodeJWT(token);
+    if (decoded.user.admin) {
+        console.log(decoded.user.admin);
     }
-];
+    else {
+        window.location.href = "/login.html";
+    }
+}
+let recipes = [];
+
+async function getRecipes() {
+    const token = getCookieValue('authToken');
+    const url = "https://recipe-website-backend-zeta.vercel.app/api/recipe/all";
+
+    const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'authToken': token
+        }
+    });
+
+    if (!response.ok) {
+        console.error('Failed to fetch recipes:', response.status);
+        return;
+    }
+
+    const data = await response.json();
+    return data;
+}
+
+
+
 
 // DOM elements
 const recipesTable = document.getElementById('recipesTable').getElementsByTagName('tbody')[0];
@@ -51,7 +69,10 @@ const recipeImageInput = document.getElementById('recipeImage');
 const logoutBtn = document.getElementById('logoutBtn');
 
 // Load recipes into table
-function loadRecipes() {
+async function loadRecipes() {
+    recipes = await getRecipes(); // fetch and assign
+    if (!recipes) return;
+    // console.log(recipes);
     recipesTable.innerHTML = '';
     recipes.forEach(recipe => {
         const row = recipesTable.insertRow();
@@ -89,7 +110,7 @@ addRecipeBtn.addEventListener('click', () => {
 function editRecipe(e) {
     const id = parseInt(e.target.getAttribute('data-id'));
     const recipe = recipes.find(r => r.id === id);
-    
+
     if (recipe) {
         modalTitle.textContent = 'Edit Recipe';
         recipeIdInput.value = recipe.id;
@@ -113,15 +134,15 @@ function deleteRecipe(e) {
 // Save recipe (add or update)
 recipeForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
+
     const id = recipeIdInput.value ? parseInt(recipeIdInput.value) : recipes.length > 0 ? Math.max(...recipes.map(r => r.id)) + 1 : 1;
     const title = recipeTitleInput.value;
     const description = recipeDescInput.value;
     const ingredients = recipeIngredientsInput.value;
     const image = recipeImageInput.value;
-    
+
     const recipe = { id, title, description, ingredients, image };
-    
+
     if (recipeIdInput.value) {
         // Update existing recipe
         const index = recipes.findIndex(r => r.id === id);
@@ -132,7 +153,7 @@ recipeForm.addEventListener('submit', (e) => {
         // Add new recipe
         recipes.push(recipe);
     }
-    
+
     loadRecipes();
     recipeModal.style.display = 'none';
 });
