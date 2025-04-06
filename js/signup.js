@@ -1,8 +1,8 @@
-document.getElementById("loginForm").addEventListener("submit", async (e) => {
+document.getElementById("signupForm").addEventListener("submit", async (e) => {
     e.preventDefault();
     const username = document.getElementById("username").value;
     const password = document.getElementById("password").value;
-    const response = await fetch("https://recipe-website-backend-zeta.vercel.app/api/auth/login", {
+    const response = await fetch("https://recipe-website-backend-zeta.vercel.app/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -13,8 +13,11 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             document.cookie = "authToken=" + authToken;
             window.location.href = "/admin.html";
         }
+        else if (response.status == 403) {
+            window.alert("Admin User Already Exists! Please Login.");
+        }
         else {
-            window.alert("Username or Password is incorrect");
+            window.alert("Please Enter a valid Username or Password");
         }
     }
     else {
@@ -24,9 +27,11 @@ document.getElementById("loginForm").addEventListener("submit", async (e) => {
             document.cookie = "authToken=" + authToken;
             window.location.href = "/index.html";
         }
+        else if (response.status == 403) {
+            window.alert("User Already Exists! Please Login.");
+        }
         else {
-            window.alert("Username or password is incorrect");
+            window.alert("Please Enter a valid Username or Password");
         }
     }
 });
-
