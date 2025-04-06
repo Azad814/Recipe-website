@@ -1,7 +1,7 @@
   // Check if admin is logged in
-  if (!localStorage.getItem('adminLoggedIn')) {
-    window.location.href = 'login.html';
-}
+//   if (!localStorage.getItem('adminLoggedIn')) {
+//     window.location.href = 'login.html';
+// }
 
 // Sample recipe data (in a real app, this would come from a backend API)
 let recipes = [
