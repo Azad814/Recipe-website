@@ -1,3 +1,5 @@
+const url = "https://recipe-website-backend-zeta.vercel.app/";
+
 // Check if admin is logged in
 function getCookieValue(name) {
     const cookies = document.cookie.split("; ");
@@ -31,9 +33,9 @@ let recipes = [];
 
 async function getRecipes() {
     const token = getCookieValue('authToken');
-    const url = "https://recipe-website-backend-zeta.vercel.app/api/recipe/all";
+    const getRecipeUrl = url + "api/recipe/all";
 
-    const response = await fetch(url, {
+    const response = await fetch(getRecipeUrl, {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -47,6 +49,7 @@ async function getRecipes() {
     }
 
     const data = await response.json();
+    // console.log(data);
     return data;
 }
 
@@ -77,13 +80,11 @@ async function loadRecipes() {
     recipes.forEach(recipe => {
         const row = recipesTable.insertRow();
         row.innerHTML = `
-            <td>${recipe.id}</td>
-            <td><img src="${recipe.image}" alt="${recipe.title}" style="width:50px;height:50px;object-fit:cover;"></td>
-            <td>${recipe.title}</td>
-            <td>${recipe.description}</td>
+            <td>${recipe._id}</td>
+            <td><img src="${recipe.image}" alt="${recipe.name}" style="width:50px;height:50px;object-fit:cover;"></td>
             <td>
-                <button class="action-btn edit-btn" data-id="${recipe.id}"><i class="fas fa-edit"></i></button>
-                <button class="action-btn delete-btn" data-id="${recipe.id}"><i class="fas fa-trash"></i></button>
+                <button class="action-btn edit-btn" data-id="${recipe._id}"><i class="fas fa-edit"></i></button>
+                <button class="action-btn delete-btn" data-id="${recipe._id}"><i class="fas fa-trash"></i></button>
             </td>
         `;
     });
@@ -100,33 +101,92 @@ async function loadRecipes() {
 
 // Add new recipe
 addRecipeBtn.addEventListener('click', () => {
-    modalTitle.textContent = 'Add New Recipe';
     recipeForm.reset();
     recipeIdInput.value = '';
     recipeModal.style.display = 'flex';
 });
 
 // Edit recipe
-function editRecipe(e) {
-    const id = parseInt(e.target.getAttribute('data-id'));
-    const recipe = recipes.find(r => r.id === id);
+async function editRecipe(e) {
+    const id = e.currentTarget.getAttribute('data-id');
+    const getRecipeUrl = url + "api/recipe/one/" + id;
+    const token = getCookieValue("authToken");
 
+    const response = await fetch(getRecipeUrl, {
+        headers: {
+            "authToken": token
+        }
+    });
+
+    const recipe = await response.json();
+    console.log(recipe);
     if (recipe) {
         modalTitle.textContent = 'Edit Recipe';
-        recipeIdInput.value = recipe.id;
-        recipeTitleInput.value = recipe.title;
-        recipeDescInput.value = recipe.description;
-        recipeIngredientsInput.value = recipe.ingredients;
+        recipeIdInput.value = recipe._id; // store id for update
+        recipeTitleInput.value = recipe.name;
+        recipeIngredientsInput.value = recipe.ingredient;
+        recipeDescInput.value = recipe.process;
         recipeImageInput.value = recipe.image;
         recipeModal.style.display = 'flex';
     }
 }
 
+recipeForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const id = recipeIdInput.value;
+    const name = recipeTitleInput.value;
+    const ingredients = recipeIngredientsInput.value;
+    const process = recipeDescInput.value;
+    const image = recipeImageInput.value;
+
+    const recipe = { name, ingredients, process, image };
+    const token = getCookieValue("authToken");
+
+    if (id) {
+        // Update existing recipe
+        const updateUrl = `${url}api/recipe/one/${id}`;
+        await fetch(updateUrl, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'authToken': token
+            },
+            body: JSON.stringify(recipe)
+        });
+    } else {
+        // Add new recipe
+        await fetch(`${url}api/recipe/add`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'authToken': token
+            },
+            body: JSON.stringify(recipe)
+        });
+    }
+
+    loadRecipes();
+    recipeModal.style.display = 'none';
+});
+
 // Delete recipe
-function deleteRecipe(e) {
-    const id = parseInt(e.target.getAttribute('data-id'));
+async function deleteRecipe(e) {
+    const id = e.currentTarget.getAttribute('data-id');
+    console.log(id);
+    const deleteRecipeUrl = url + "api/recipe/delete/" + id;
     if (confirm('Are you sure you want to delete this recipe?')) {
-        recipes = recipes.filter(recipe => recipe.id !== id);
+        const token = getCookieValue("authToken");
+        const response = await fetch(deleteRecipeUrl, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                'authToken': token
+            }
+        });
+        if (await response.ok) {
+            window.alert("Recipe Removed Successfully");
+        }
         loadRecipes();
     }
 }
@@ -135,13 +195,17 @@ function deleteRecipe(e) {
 recipeForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const id = recipeIdInput.value ? parseInt(recipeIdInput.value) : recipes.length > 0 ? Math.max(...recipes.map(r => r.id)) + 1 : 1;
     const title = recipeTitleInput.value;
-    const description = recipeDescInput.value;
     const ingredients = recipeIngredientsInput.value;
+    const process = recipeDescInput.value;
     const image = recipeImageInput.value;
 
-    const recipe = { id, title, description, ingredients, image };
+    const recipe = {
+        name: title,
+        ingredients: ingredients,
+        process: process,
+        image: image
+    };
 
     if (recipeIdInput.value) {
         // Update existing recipe
@@ -169,7 +233,7 @@ cancelBtn.addEventListener('click', () => {
 
 // Logout
 logoutBtn.addEventListener('click', () => {
-    localStorage.removeItem('adminLoggedIn');
+    document.cookie = "authToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
     window.location.href = 'login.html';
 });
 

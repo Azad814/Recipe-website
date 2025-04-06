@@ -58,8 +58,6 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Image</th>
-                                <th>Title</th>
-                                <th>Description</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -82,16 +80,16 @@
             <form id="recipeForm">
                 <input type="hidden" id="recipeId">
                 <div class="form-group">
-                    <label for="recipeTitle">Title</label>
+                    <label for="recipeTitle">Name</label>
                     <input type="text" id="recipeTitle" required>
-                </div>
-                <div class="form-group">
-                    <label for="recipeDescription">Description</label>
-                    <input type="text" id="recipeDescription" required>
                 </div>
                 <div class="form-group">
                     <label for="recipeIngredients">Ingredients</label>
                     <textarea id="recipeIngredients" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recipeDescription">Process</label>
+                    <textarea id="recipeDescription" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="recipeImage">Image URL</label>
