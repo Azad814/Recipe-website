@@ -83,6 +83,7 @@ async function loadRecipes() {
         row.innerHTML = `
             <td>${recipe._id}</td>
             <td><img src="${recipe.image}" alt="${recipe.name}" style="width:50px;height:50px;object-fit:cover;"></td>
+             <td>${recipe.name}</td>
             <td>
                 <button class="action-btn edit-btn" data-id="${recipe._id}"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete-btn" data-id="${recipe._id}"><i class="fas fa-trash"></i></button>
