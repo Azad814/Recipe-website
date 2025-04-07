@@ -144,46 +144,63 @@ function searchRecipes() {
 //     });
 
 
+function getCookieValue(name) {
+    const cookies = document.cookie.split("; ");
+    for (let cookie of cookies) {
+        const [key, value] = cookie.split("=");
+        if (key === name) return value;
+    }
+    return null;
+}
+
 const recipeContainer = document.getElementById('recipe-container');
 const BACKEND_URL = 'https://recipe-website-backend-zeta.vercel.app/api/recipe/all';
 
 async function fetchAndRenderRecipes() {
     try {
         // Check if authToken exists in cookies
-        const cookies = document.cookie.split(';').map(cookie => cookie.trim());
-        const authTokenCookie = cookies.find(cookie => cookie.startsWith('authToken='));
-
-        if (!authTokenCookie) {
+        // const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+        // const authTokenCookie = cookies.find(cookie => cookie.startsWith('authToken='));
+        const token = getCookieValue("authToken");
+        console.log(token);
+        if (!token) {
             recipeContainer.innerHTML = `<p class="text-danger">You must be logged in to view recipes.</p>`;
             return;
         }
+        else {
+            // Fetch recipes from backend
+            const response = await fetch(BACKEND_URL, {
+                method: 'GET',
+                headers: {
+                    "Content Type": "application/json",
+                    "authToken": token,
+                }
+            });
+            console.log(response);
+            if (!response.ok) throw new Error('Network response was not ok');
+            else {
+                const recipes = await response.json();
+                console.log(recipes);
+                // Clear container and render each recipe
+                recipeContainer.innerHTML = '';
+                recipes.forEach(recipe => {
+                    const col = document.createElement('div');
+                    col.className = 'col-md-4';
 
-        // Fetch recipes from backend
-        const response = await fetch(BACKEND_URL);
-        if (!response.ok) throw new Error('Network response was not ok');
-
-        const recipes = await response.json();
-
-        // Clear container and render each recipe
-        recipeContainer.innerHTML = '';
-        recipes.forEach(recipe => {
-            const col = document.createElement('div');
-            col.className = 'col-md-4';
-
-            col.innerHTML = `
-                <div class="card shadow-sm h-100">
+                    col.innerHTML = `
+                    <div class="card shadow-sm h-100">
                     <img src="${recipe.image || 'https://via.placeholder.com/300x200'}" class="card-img-top" alt="${recipe.title}">
                     <div class="card-body">
-                        <h5 class="card-title">${recipe.title}</h5>
-                        <p class="card-text">${recipe.description || 'No description available.'}</p>
-                        <a href="/recipe/${recipe._id}" class="btn btn-primary">View Recipe</a>
+                    <h5 class="card-title">${recipe.title}</h5>
+                    <p class="card-text">${recipe.description || 'No description available.'}</p>
+                    <a href="/recipe/${recipe._id}" class="btn btn-primary">View Recipe</a>
                     </div>
-                </div>
-            `;
-
-            recipeContainer.appendChild(col);
-        });
-
+                    </div>
+                    `;
+                    recipeContainer.appendChild(col);
+                });
+            }
+        }
     } catch (err) {
         console.error('Failed to fetch recipes:', err);
         recipeContainer.innerHTML = `<p class="text-danger">Unable to load recipes at the moment.</p>`;
