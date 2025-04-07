@@ -35,10 +35,11 @@
                 <h3><i class="fas fa-user-shield"></i> Admin Panel</h3>
             </div>
             <ul class="sidebar-menu">
-                <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
+                <!-- <li class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</li>
                 <li><i class="fas fa-utensils"></i> Recipes</li>
                 <li><i class="fas fa-users"></i> Users</li>
-                <li><i class="fas fa-cog"></i> Settings</li>
+                <li><i class="fas fa-cog"></i> Settings</li> -->
+                <li class="active"><i class="fas fa-utensils"></i> Recipes Dashboard</li>
             </ul>
         </div>
 
@@ -59,6 +60,7 @@
                                 <th>ID</th>
                                 <th>Image</th>
                                 <th>Actions</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -80,16 +82,16 @@
             <form id="recipeForm">
                 <input type="hidden" id="recipeId">
                 <div class="form-group">
-                    <label for="recipeTitle">Name</label>
+                    <label for="recipeTitle">Title</label>
                     <input type="text" id="recipeTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipeDescription">Description</label>
+                    <input type="text" id="recipeDescription" required>
                 </div>
                 <div class="form-group">
                     <label for="recipeIngredients">Ingredients</label>
                     <textarea id="recipeIngredients" required></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="recipeDescription">Process</label>
-                    <textarea id="recipeDescription" required></textarea>
                 </div>
                 <div class="form-group">
                     <label for="recipeImage">Image URL</label>

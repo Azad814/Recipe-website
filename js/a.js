@@ -145,7 +145,7 @@ function searchRecipes() {
 
 
 const recipeContainer = document.getElementById('recipe-container');
-const BACKEND_URL = 'https://recipe-website-backend-zeta.vercel.app/';
+const BACKEND_URL = 'https://recipe-website-backend-zeta.vercel.app/api/recipe/all';
 
 async function fetchAndRenderRecipes() {
     try {
