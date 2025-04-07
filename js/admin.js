@@ -83,6 +83,7 @@ async function loadRecipes() {
         row.innerHTML = `
             <td>${recipe._id}</td>
             <td><img src="${recipe.image}" alt="${recipe.name}" style="width:50px;height:50px;object-fit:cover;"></td>
+             <td>${recipe.name}</td>
             <td>
                 <button class="action-btn edit-btn" data-id="${recipe._id}"><i class="fas fa-edit"></i></button>
                 <button class="action-btn delete-btn" data-id="${recipe._id}"><i class="fas fa-trash"></i></button>
@@ -114,7 +115,9 @@ async function editRecipe(e) {
     const token = getCookieValue("authToken");
 
     const response = await fetch(getRecipeUrl, {
+        method:'GET',
         headers: {
+            "Content-Type": "application/json",
             "authToken": token
         }
     });
@@ -137,7 +140,7 @@ recipeForm.addEventListener('submit', async (e) => {
 
     const id = recipeIdInput.value;
     const name = recipeTitleInput.value;
-    const ingredients = recipeIngredientsInput.value;
+    const ingredient = recipeIngredientsInput.value;
     const process = recipeDescInput.value;
     const image = recipeImageInput.value;
 
@@ -146,7 +149,7 @@ recipeForm.addEventListener('submit', async (e) => {
 
     if (id) {
         // Update existing recipe
-        const updateUrl = `${url}api/recipe/one/${id}`;
+        const updateUrl = `${url}api/recipe/update/${id}`;
         await fetch(updateUrl, {
             method: 'PUT',
             headers: {
