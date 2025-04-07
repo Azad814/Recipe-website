@@ -113,32 +113,83 @@ function searchRecipes() {
 
 
 // Templating Recipe Cards
-const recipeContainer = document.getElementById('recipe-container');
+// const recipeContainer = document.getElementById('recipe-container');
 
-// Replace with your actual backend endpoint
+// // Replace with your actual backend endpoint
+// const BACKEND_URL = 'https://recipe-website-backend-zeta.vercel.app/';
+// fetch(BACKEND_URL)
+//     .then(res => res.json())
+//     .then(recipes => {
+//         recipes.forEach(recipe => {
+//             const col = document.createElement('div');
+//             col.className = 'col-md-4';
+
+//             col.innerHTML = `
+//         <div class="card shadow-sm h-100">
+//           <img src="${recipe.image || 'https://via.placeholder.com/300x200'}" class="card-img-top" alt="${recipe.title}">
+//           <div class="card-body">
+//             <h5 class="card-title">${recipe.title}</h5>
+//             <p class="card-text">${recipe.description || 'No description available.'}</p>
+//             <a href="/recipe/${recipe._id}" class="btn btn-primary">View Recipe</a>
+//           </div>
+//         </div>
+//       `;
+
+//             recipeContainer.appendChild(col);
+//         });
+//     })
+//     .catch(err => {
+//         console.error('Failed to fetch recipes:', err);
+//         recipeContainer.innerHTML = `<p class="text-danger">Unable to load recipes at the moment.</p>`;
+//     });
+
+
+const recipeContainer = document.getElementById('recipe-container');
 const BACKEND_URL = 'https://recipe-website-backend-zeta.vercel.app/';
-fetch(BACKEND_URL)
-    .then(res => res.json())
-    .then(recipes => {
+
+async function fetchAndRenderRecipes() {
+    try {
+        // Check if authToken exists in cookies
+        const cookies = document.cookie.split(';').map(cookie => cookie.trim());
+        const authTokenCookie = cookies.find(cookie => cookie.startsWith('authToken='));
+
+        if (!authTokenCookie) {
+            recipeContainer.innerHTML = `<p class="text-danger">You must be logged in to view recipes.</p>`;
+            return;
+        }
+
+        // Fetch recipes from backend
+        const response = await fetch(BACKEND_URL);
+        if (!response.ok) throw new Error('Network response was not ok');
+
+        const recipes = await response.json();
+
+        // Clear container and render each recipe
+        recipeContainer.innerHTML = '';
         recipes.forEach(recipe => {
             const col = document.createElement('div');
             col.className = 'col-md-4';
 
             col.innerHTML = `
-        <div class="card shadow-sm h-100">
-          <img src="${recipe.image || 'https://via.placeholder.com/300x200'}" class="card-img-top" alt="${recipe.title}">
-          <div class="card-body">
-            <h5 class="card-title">${recipe.title}</h5>
-            <p class="card-text">${recipe.description || 'No description available.'}</p>
-            <a href="/recipe/${recipe._id}" class="btn btn-primary">View Recipe</a>
-          </div>
-        </div>
-      `;
+                <div class="card shadow-sm h-100">
+                    <img src="${recipe.image || 'https://via.placeholder.com/300x200'}" class="card-img-top" alt="${recipe.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${recipe.title}</h5>
+                        <p class="card-text">${recipe.description || 'No description available.'}</p>
+                        <a href="/recipe/${recipe._id}" class="btn btn-primary">View Recipe</a>
+                    </div>
+                </div>
+            `;
 
             recipeContainer.appendChild(col);
         });
-    })
-    .catch(err => {
+
+    } catch (err) {
         console.error('Failed to fetch recipes:', err);
         recipeContainer.innerHTML = `<p class="text-danger">Unable to load recipes at the moment.</p>`;
-    });
+    }
+}
+
+// Call the function
+fetchAndRenderRecipes();
+
