@@ -37,7 +37,7 @@ async function fetchAndRenderRecipes() {
         recipeContainer.innerHTML = '';
         recipes.forEach(recipe => {
             const col = document.createElement('div');
-            col.className = 'p-5 col-md-2 mb-5 mx-4'; // Added spacing at bottom
+            col.className = 'p-3 col-md-2 mb-5 mx-4'; // Added spacing at bottom
 
             col.innerHTML = `
                 <div class="card shadow-sm h-100" style="width: 18rem;">
